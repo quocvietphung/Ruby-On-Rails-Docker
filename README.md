@@ -14,10 +14,10 @@ docker-compose up
 
 # http://localhost:3000
 docker-compose run --rm app rails g scaffold note title body:text
-docker exec web
 
 # Database command 
-docker exec web rails db:migrate
+docker compose exec web rails db:migrate
+docker compose exec db mysql -uroot -p
 rails db:migrate
 
 
