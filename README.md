@@ -20,5 +20,9 @@ docker compose exec web rails db:migrate
 docker compose exec db mysql -uroot -p
 rails db:migrate
 
+#Chown user 
+sudo chown -R $USER:$USER .
 
+#Home index 
+rails g controller home index
 
